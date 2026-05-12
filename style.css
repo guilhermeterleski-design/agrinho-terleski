@@ -1,0 +1,91 @@
+/* DESIGN SYSTEM */
+:root {
+    --brand: #2ecc71;
+    --brand-dark: #27ae60;
+    --bg-main: #ffffff;
+    --bg-alt: #f4f7f6;
+    --text-main: #2c3e50;
+    --text-light: #7f8c8d;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    --font-size: 100%;
+}
+
+/* ALTO CONTRASTE */
+body.high-contrast {
+    --brand: #ffff00;
+    --bg-main: #000;
+    --bg-alt: #1a1a1a;
+    --text-main: #fff;
+    --text-light: #eee;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: var(--font-size);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    scroll-behavior: smooth;
+    transition: background 0.3s ease;
+}
+
+/* SKIP LINK */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--brand);
+    color: white;
+    padding: 1rem;
+    z-index: 999;
+}
+.skip-link:focus { top: 0; }
+
+/* GRID LAYOUT - EDITÁVEL AQUI */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 4rem 10%;
+}
+
+/* CARD UX */
+.custom-card {
+    background: var(--bg-main);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-bottom: 4px solid transparent;
+    transition: var(--transition);
+}
+.custom-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--brand);
+}
+
+/* ACCORDION REFINADO */
+.accordion-item { margin-bottom: 1rem; border-radius: var(--radius); overflow: hidden; }
+.acc-trigger {
+    width: 100%; padding: 1.5rem;
+    background: var(--bg-alt);
+    border: none; cursor: pointer;
+    display: flex; justify-content: space-between;
+    font-weight: bold; color: var(--text-main);
+}
+
+/* ANIMAÇÕES */
+.reveal {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+    transition: all 0.6s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* RESPONSIVIDADE ADAPTATIVA */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .grid-layout { padding: 2rem 5%; }
+}
