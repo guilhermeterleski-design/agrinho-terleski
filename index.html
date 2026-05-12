@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSustentável | Inovação e Futuro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header role="banner" class="header-glass">
+        <nav class="navbar" aria-label="Navegação Principal">
+            <div class="logo">Agro<span>Forte</span></div>
+            <div class="controls" role="group" aria-label="Ferramentas de Acessibilidade">
+                <button onclick="adjustFont(1)" title="Aumentar texto" aria-label="Aumentar texto">A+</button>
+                <button onclick="adjustFont(-1)" title="Diminuir texto" aria-label="Diminuir texto">A-</button>
+                <button onclick="toggleTheme()" class="theme-toggle" aria-label="Alternar alto contraste">◐</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="hero-visual">
+            <div class="hero-content">
+                <h1>O Futuro é <span class="txt-gradient">Regenerativo</span></h1>
+                <p>Unindo a força da produção nacional com tecnologias de preservação ambiental.</p>
+                <a href="#pilares" class="btn-primary">Conhecer Soluções</a>
+            </div>
+        </section>
+
+        <section id="pilares" class="reveal" aria-labelledby="head-pilares">
+            <h2 id="head-pilares" class="section-title">Nossa Estratégia</h2>
+            <div id="cards-grid" class="grid-layout"></div>
+        </section>
+
+        <section id="tecnologia" class="reveal bg-alt" aria-labelledby="head-tech">
+            <h2 id="head-tech" class="section-title">Tecnologia no Campo</h2>
+            <div id="accordion-group" class="accordion-wrapper"></div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <p>&copy; 2026 Agro Forte. Práticas ESG em foco.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
